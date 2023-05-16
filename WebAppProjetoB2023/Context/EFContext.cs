@@ -11,6 +11,5 @@ namespace WebAppProjetoB2023.Models
         public EFContext() : base("Asp_Net_MVC_CS") { } // Contrutor que inicializa a classe, chama o metodo construtor da classe pai, que recebe a string de conexão
         public DbSet<Categoria> Categorias { get; set; } // faz uma tabela com base na classe Categoria
         public DbSet<Fabricante> Fabricantes { get; set; }
-
     }
 }
