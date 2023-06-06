@@ -20,6 +20,7 @@ namespace WebAppProjetoB2023.Controllers
 
             home.Categoria = context.Categorias.OrderBy(o =>o.Nome);
             home.Fabricante = context.Fabricantes.OrderBy(o =>o.nome);
+            home.Produto = context.Produtos.OrderBy(o => o.Nome);
 
             return View(home);
         }

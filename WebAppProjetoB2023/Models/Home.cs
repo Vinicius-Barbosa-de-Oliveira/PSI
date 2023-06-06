@@ -9,5 +9,6 @@ namespace WebAppProjetoB2023.Models
     {
         public IQueryable<Categoria> Categoria;
         public IQueryable<Fabricante> Fabricante;
+        public IQueryable<Produto> Produto;
     }
 }

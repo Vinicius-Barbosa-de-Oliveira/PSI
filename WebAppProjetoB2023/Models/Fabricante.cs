@@ -9,5 +9,6 @@ namespace WebAppProjetoB2023.Models
     {
         public long FabricanteId { get; set; }
         public string nome { get; set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
