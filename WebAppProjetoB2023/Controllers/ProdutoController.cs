@@ -20,6 +20,7 @@ namespace WebAppProjetoB2023.Controllers
             //return View(context.Produtos.OrderBy(p => p.Nome));
             return View(produtos);
         }
+
         public ActionResult Create()
         {
             ViewBag.CategoriaId = new SelectList(context.Categorias.OrderBy(c => c.Nome), "CategoriaId", "Nome");

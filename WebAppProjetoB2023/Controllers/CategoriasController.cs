@@ -31,13 +31,12 @@ namespace WebAppProjetoB2023.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria c = context.Categorias.Find(id);
-            //acha a procura na tabela Categorias o id, e atribui essa categoria na variavel cc
-            if (c == null)
+            Categoria categoria = context.Categorias.Where(c => c.CategoriaId == id).Include("Produtos.Categoria").First();
+            if (categoria == null)
             {
                 return HttpNotFound();
             }
-            return View(c);
+            return View(categoria);
         }
         public ActionResult Delete(long? id)
         {
